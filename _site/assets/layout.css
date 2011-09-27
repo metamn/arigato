@@ -4,19 +4,12 @@
 }
 
 
-
-
-
-
-
-
-
-
+/* Hide Flash Player
+*/
 #amptracker_NowPlaying {
   display: none !important;
 }
 #hide-flashplayer {
-  background: #000;
   width: 240px;
   height: 50px;
   position: relative;
