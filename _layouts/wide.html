@@ -1,0 +1,47 @@
+---
+---
+{% include head.html %}  
+  <body class="wide">
+    <div id="container">
+          
+      <section id="screenshots"> 
+        <header><h3 class="hidden">Screenshoots</h3></header>
+        <div id="background-image" class="link" rel="{{ page.link }}">
+          <span class="img-placeholder"></span>
+          <noscript data-mobilesrc="/assets/small-{{ page.images.first.src }}" data-fullsrc="/assets/{{ page.images.first.src }}" data-alttext="" class="responsivize">
+            <img title="" src="/assets/{{ page.images.first.src }}">            
+          </noscript>
+        </div>
+        
+        <ul id="posts" class="hidden">
+          {% for post in site.categories.portfolio %}
+            <li class="{{ post.link }}">{{ site.url }}{{ post.url }}</li>
+          {% endfor %}
+        </ul>        
+      </section>
+      
+      <header id="logo" class="block">
+        <h3 class="hidden">Menu</h3>  
+        <ul class="inline-list">
+          <li class="desktop"><h1><a href="/">Ungainly</a></h1></li>            
+          <li class="mobile">
+            <div id="logo-image" class="mobile">
+              <a href="/"><img src="/assets/logo-ungainly.png" /></a>
+            </div>
+          </li>
+          <li class="message">
+            <em>
+              <span class="desktop">Click for next.Double click to view live</span>
+              <span class="mobile">Click image for next. <a title="{{ page.title }}" href="{{ page.link }}">Click here to view live</a></span>
+            </em>
+          </li>            
+        </ul>     
+      </header>
+      
+    </div>   
+    
+    {% include ga.html %}
+  </body>
+</html>
+
+

@@ -1,0 +1,31 @@
+<article id="item" class="block">
+  <header class="info">
+    <h3><a title="Permalink to {{ post.title }}" href="{{ post.url ]}}">
+      {% if post.categories.first == 'feedback' %}<span class="quote">"{% endif %}{{ post.title }}{% if post.categories.first == 'feedback' %}"</span>{% endif %}
+    </a></h3>
+  </header>
+  
+  {% if post.images %}
+    <div id="images">
+      {% for image in post.images limit: {{limit}} %}
+        <div id="image">
+          <a title="Visit {{ image.title }} at {{ image.url }}" href="{{ image.url }}">
+            <span class="img-placeholder"></span>
+            <noscript data-mobilesrc="/assets/small-{{ image.src }}" data-fullsrc="/assets/{{ image.src }}" data-alttext="{{ image.title }}" class="responsivize">
+              <img src="/assets/{{ image.src }}">            
+            </noscript>
+          </a>
+        </div>        
+      {% endfor %}
+    </div>
+    <div class="content">
+      {{ post.content }}
+    </div>
+  {% else %}
+    <div id="just-text" class="content">
+      {{ post.content }}
+    </div>
+  {% endif %}
+  
+  
+</article>

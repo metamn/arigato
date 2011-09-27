@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<header class="hidden"><h6>The {{ page.categories.first }} page</h6></header>
+<section id="{{ page.categories.first }}" class="collection">
+  <header><h6>{{ page.categories.first }}</h6></header>  
+  {% for post in site.posts %}
+    {% if post.categories.first == page.categories.first %}
+      {% include article.html %}
+    {% endif %}
+  {% endfor %}
+</section>
+
