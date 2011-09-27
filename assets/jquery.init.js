@@ -51,8 +51,9 @@ jQuery(document).ready(function(){
   
   // Displaying recently played
   function setPlayed() {
-    var txt = jQuery("#fromlastfm table").html();
-    jQuery("#playlist").html(txt);
+    jQuery('#lastfmframe').load(function(){
+      jQuery('#lastfmframe').contents().find('body').html('Hey, i`ve changed content of <body>! Yay!!!');
+    });
   }
   
   jQuery(".link").click(function() {
