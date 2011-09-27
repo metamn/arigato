@@ -34,30 +34,56 @@
     <!--<script type="text/javascript" src="/assets/jquery.grid.js"></script>-->
   </head>
 
-
   
-  <body>
-    <div class="container">
-      <div class="desktop">
-        <header id="header" class="block">
+
+<body>
+  <div id="container">    
+    <header id="header" class="block">
   
   <hgroup id="logo" class="block">
     <h1><a href="/"><img src="/assets/logo.png" /></a></h1>
   </hgroup>
 
 </header>
-
-      </div>
-
-      <section id="content" class="content right">
-        <p>Ooops, something went wrong ...</p>
-      </section>
-            
-    </div>    
     
-       
 
-  </body>
+    <section id="content">
+      <article id="item" class="block">
+  <header class="info">
+    
+  </header>
+  
+  
+  
+  <div id="player">
+    <script type="text/javascript" src="http://www.amptracker.com/nowplaying/nowplaying.php?username=plusfm&image=http://www.plusfm.net/images/pochetteplusfm.jpg&listenLink=&amazonId=youamazonID&ratings=true"></script>
+				
+		<OBJECT id="flashplayer" width="240" height="46" classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,02,902" standby="Loading..." type="application/x-oleobject">
+					<PARAM NAME="FileName" VALUE="">
+					<PARAM NAME="transparentatStart" VALUE="true">
+					<PARAM NAME="autoStart" VALUE="1">
+					<PARAM NAME="showControls" VALUE="0">
+					<PARAM NAME="ShowStatusBar" VALUE="1">
+					<EMBED type="application/x-mplayer2" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/" SRC="" ShowStatusBar="1"  showControls="0" width="240" height="46" AutoStart="1"></EMBED>
+		</OBJECT>
+		
+		<div id="hide-flashplayer">&nbsp;</div>
+  </div>
+  
+  <div id="content">
+      
+  </div>
+  
+</article>
+
+
+    </section>
+    
+  </div>
+  
+     
+
+</body>
 </html>
 
 

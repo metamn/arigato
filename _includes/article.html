@@ -1,31 +1,37 @@
 <article id="item" class="block">
   <header class="info">
-    <h3><a title="Permalink to {{ post.title }}" href="{{ post.url ]}}">
-      {% if post.categories.first == 'feedback' %}<span class="quote">"{% endif %}{{ post.title }}{% if post.categories.first == 'feedback' %}"</span>{% endif %}
-    </a></h3>
+    
   </header>
   
   {% if post.images %}
     <div id="images">
-      {% for image in post.images limit: {{limit}} %}
+      {% for image in post.images limit: {{ limit }} %}
         <div id="image">
           <a title="Visit {{ image.title }} at {{ image.url }}" href="{{ image.url }}">
-            <span class="img-placeholder"></span>
-            <noscript data-mobilesrc="/assets/small-{{ image.src }}" data-fullsrc="/assets/{{ image.src }}" data-alttext="{{ image.title }}" class="responsivize">
-              <img src="/assets/{{ image.src }}">            
-            </noscript>
+            <img src="/assets/{{ image.src }}">                        
           </a>
         </div>        
       {% endfor %}
-    </div>
-    <div class="content">
-      {{ post.content }}
-    </div>
-  {% else %}
-    <div id="just-text" class="content">
-      {{ post.content }}
-    </div>
+    </div>    
   {% endif %}
   
+  <div id="player">
+    <script type="text/javascript" src="http://www.amptracker.com/nowplaying/nowplaying.php?username=plusfm&image=http://www.plusfm.net/images/pochetteplusfm.jpg&listenLink={{ post.stream }}&amazonId=youamazonID&ratings=true"></script>
+				
+		<OBJECT id="flashplayer" width="240" height="46" classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,02,902" standby="Loading..." type="application/x-oleobject">
+					<PARAM NAME="FileName" VALUE="{{ post.stream }}">
+					<PARAM NAME="transparentatStart" VALUE="true">
+					<PARAM NAME="autoStart" VALUE="1">
+					<PARAM NAME="showControls" VALUE="0">
+					<PARAM NAME="ShowStatusBar" VALUE="1">
+					<EMBED type="application/x-mplayer2" pluginspage = "http://www.microsoft.com/Windows/MediaPlayer/" SRC="{{ post.stream }}" ShowStatusBar="1"  showControls="0" width="240" height="46" AutoStart="1"></EMBED>
+		</OBJECT>
+		
+		<div id="hide-flashplayer">&nbsp;</div>
+  </div>
+  
+  <div id="content">
+    {{ post.content }}  
+  </div>
   
 </article>

@@ -1,3 +1,7 @@
 ---
 layout: default
 ---
+
+{% for post in site.posts limit:1 %}
+  {% include article.html %}
+{% endfor %}

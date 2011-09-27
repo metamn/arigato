@@ -2,10 +2,4 @@
 layout: default
 ---
 
-<header class="hidden"><h6>The {{ page.title }} page</h6></header>
-{% assign post = page %}
 {% include article.html %}
-
-{% assign category = page.categories.first %}
-{% assign current = page.title %}
-{% include similar.html %}
