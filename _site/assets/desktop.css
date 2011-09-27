@@ -1,0 +1,33 @@
+/* The grid
+*/
+
+
+#images {
+  width: 20%;
+  margin-right: 5%;
+}
+#info {
+  width: 70%;
+  margin-right: 5%;
+  position: relative;
+  top: -15em;
+}
+#info #album-image {
+  margin-top: 5%;
+  width: 40%;
+  margin-right: 10%;
+}
+#info #artist-image {
+  width: 50%;
+}
+#images, #info, #info #album-image, #info #artist-image {
+  float: left;
+}
+
+#playlist {
+  width: 40%;
+  margin-left: 25%;
+  position: relative;
+  top: -10em;
+}
+
