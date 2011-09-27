@@ -13,7 +13,7 @@ h1 { font-size:2.61538em; padding:1.28666em 0; }
 h2 { font-size:2.11538em; padding:1.44305em 0; }
 h3 { font-size:1.61538em; padding:1.30936em 0; }
 
-h1, h2, h3 {
+#info h1, #info h2, #info h3 {
   padding: .312em 0;
 }
 
@@ -40,5 +40,7 @@ h1, h2, h3 {
   top: -55px;
   z-index: 1;
 }
-
+#lastfmframe {
+  display: none;
+}
 

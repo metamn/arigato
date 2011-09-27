@@ -17,21 +17,27 @@
 #info {
   width: 70%;
   margin-right: 5%;
+  margin-top: 2.5em;
 }
 #info #album-image {
   margin-top: 5%;
-  width: 40%;
-  margin-right: 10%;
+  width: 48%;
+  margin-left: 25%;
 }
 #info #artist-image {
-  width: 50%;
+  width: 50%;  
+  margin-right: 5%;  
+  margin-bottom: 2.5em;
 }
 #images, #info, #info #album-image, #info #artist-image {
   float: left;
 }
 
 #playlist {
-  width: 40%;
+  width: 35.7%;
   margin-left: 25%;
+}
+#lastfmframe {
+  margin-top: 1.25em;
 }
 

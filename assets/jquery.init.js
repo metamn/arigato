@@ -46,16 +46,27 @@ jQuery(document).ready(function(){
       
       
       jQuery('#info #track').html(ampTrack);
-      jQuery('#info #artist').html("<em>by</em> " + ampArtist);
-      jQuery('#info #album').html("<em>from</em> " + ampAlbum);   
-      
-      setAlbumImage(ampTrack, ampArtist);     
+      jQuery('#info #artist').html(ampArtist);
+      if (ampAlbum) {
+        jQuery('#info #album').html("<em>from</em> " + ampAlbum);   
+        setAlbumImage(ampTrack, ampArtist); 
+      } else {
+        jQuery('#info #album').html('');   
+      }  
       setArtistImage(ampTrack, ampArtist);
     }
   }
   
+  
+  // Polling for song change
   var changeInfo = setInterval(function(){
     setInfo();
   }, 500);
+  
+  
+  // Show / hide playlist
+  jQuery("#playlist h3").click(function() {
+    jQuery('#lastfmframe').show('slow');
+  });
   
 });

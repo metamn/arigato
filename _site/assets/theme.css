@@ -7,4 +7,8 @@ body {
   font-family: 'VT323', cursive;
 }
 
+#playlist h3 {
+  background: #656B6F;
+  color: #000;
+}
 
