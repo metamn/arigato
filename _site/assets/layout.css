@@ -4,8 +4,60 @@
 }
 
 
-/* Hide Flash Player
+/* Typography
 */
+
+body { font-size:100%; line-height:1.25; }
+h1, h2, h3 { margin-top:0; margin-bottom:0; }
+h1 { font-size:2.61538em; padding:1.28666em 0; }
+h2 { font-size:2.11538em; padding:1.44305em 0; }
+h3 { font-size:1.61538em; padding:1.30936em 0; }
+
+h1, h2, h3 {
+  padding: .312em 0;
+}
+
+
+/* Header
+*/
+
+#header img {
+  opacity: .5;
+}
+
+
+
+/* The grid
+*/
+
+
+#images {
+  width: 20%;
+  margin-right: 5%;
+}
+#info {
+  width: 70%;
+  margin-right: 5%;
+  position: relative;
+  top: -15em;
+}
+#info #album-image {
+  width: 40%;
+  margin-right: 10%;
+}
+#info #artist-image {
+  width: 50%;
+}
+#images, #info, #info #album-image, #info #artist-image {
+  float: left;
+}
+
+
+
+
+/* Hide Flash Player & playlist
+*/
+
 #amptracker_NowPlaying {
   display: none !important;
 }
@@ -16,3 +68,5 @@
   top: -50px;
   z-index: 1;
 }
+
+

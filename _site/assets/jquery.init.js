@@ -41,18 +41,23 @@ jQuery(document).ready(function(){
     var ampAlbum = jQuery('#player #amptracker_NowPlaying .display span:nth-child(5)').html();
     
     jQuery('#info #track').html(ampTrack);
-    jQuery('#info #artist').html(ampArtist);
-    jQuery('#info #album').html(ampAlbum);   
+    jQuery('#info #artist').html("<em>by</em> " + ampArtist);
+    jQuery('#info #album').html("<em>from</em> " + ampAlbum);   
     
     setAlbumImage(ampTrack, ampArtist);     
-    setArtistImage(ampTrack, ampArtist);     
-    
+    setArtistImage(ampTrack, ampArtist);
   }
   
   
+  // Displaying recently played
+  function setPlayed() {
+    var txt = jQuery("#fromlastfm table").html();
+    jQuery("#playlist").html(txt);
+  }
   
   jQuery(".link").click(function() {
     setInfo();
+    setPlayed();
   });
   
   

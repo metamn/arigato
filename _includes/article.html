@@ -5,18 +5,6 @@
     </a></h3>
   </header>
   
-  {% if post.images %}
-    <div id="images">
-      {% for image in post.images limit: {{ limit }} %}
-        <div id="image">
-          <a title="Visit {{ image.title }} at {{ image.url }}" href="{{ image.url }}">
-            <img src="/assets/{{ image.src }}">                        
-          </a>
-        </div>        
-      {% endfor %}
-    </div>    
-  {% endif %}
-  
   <div id="player">
     <script type="text/javascript" src="http://www.amptracker.com/nowplaying/nowplaying.php?username=plusfm&image=http://www.plusfm.net/images/pochetteplusfm.jpg&listenLink={{ post.stream }}&amazonId=youamazonID&ratings=true"></script>				
 		<OBJECT id="flashplayer" width="240" height="46" classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,02,902" standby="Loading..." type="application/x-oleobject">
@@ -30,10 +18,22 @@
 		<div id="hide-flashplayer">&nbsp;</div>
   </div>
   
+  {% if post.images %}
+    <div id="images">
+      {% for image in post.images limit: {{ limit }} %}
+        <div id="image">
+          <a title="Visit {{ image.title }} at {{ image.url }}" href="{{ image.url }}">
+            <img src="/assets/{{ image.src }}">                        
+          </a>
+        </div>        
+      {% endfor %}
+    </div>    
+  {% endif %}
+  
   <div id="info">
-    <h3 id="track">&nbsp;</h3>
-    <h4 id="artist">&nbsp;</h3>
-    <h4 id="album">&nbsp;</h3>
+    <h1 id="track"></h1>
+    <h2 id="artist"></h2>
+    <h3 id="album"></h3>
     <div id="album-image"></div>
     <div id="artist-image"></div>
   </div>

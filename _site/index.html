@@ -27,9 +27,13 @@
 	  	  
     <script type="text/javascript" src="/assets/modernizr.custom.30919.js"></script>
       
+    <link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+
+  
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/jquery.responsive-images.js"></script>
+    <script type="text/javascript" src="/assets/jquery.responsive-images.js"></script>    
     <script type="text/javascript" src="/assets/jquery.init.js"></script>
+    
     
     <!--<script type="text/javascript" src="/assets/jquery.grid.js"></script>-->
   </head>
@@ -56,18 +60,6 @@
     </a></h3>
   </header>
   
-  
-    <div id="images">
-      
-        <div id="image">
-          <a title="Visit plusfm eclectic electronic radio at http://plusfm.net" href="http://plusfm.net">
-            <img src="/assets/plusfm.png">                        
-          </a>
-        </div>        
-      
-    </div>    
-  
-  
   <div id="player">
     <script type="text/javascript" src="http://www.amptracker.com/nowplaying/nowplaying.php?username=plusfm&image=http://www.plusfm.net/images/pochetteplusfm.jpg&listenLink=http://www.plusfm.net/plusfm.m3u&amazonId=youamazonID&ratings=true"></script>				
 		<OBJECT id="flashplayer" width="240" height="46" classid="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,0,02,902" standby="Loading..." type="application/x-oleobject">
@@ -81,10 +73,22 @@
 		<div id="hide-flashplayer">&nbsp;</div>
   </div>
   
+  
+    <div id="images">
+      
+        <div id="image">
+          <a title="Visit plusfm eclectic electronic radio at http://plusfm.net" href="http://plusfm.net">
+            <img src="/assets/plusfm.png">                        
+          </a>
+        </div>        
+      
+    </div>    
+  
+  
   <div id="info">
-    <h3 id="track">&nbsp;</h3>
-    <h4 id="artist">&nbsp;</h3>
-    <h4 id="album">&nbsp;</h3>
+    <h1 id="track"></h1>
+    <h2 id="artist"></h2>
+    <h3 id="album"></h3>
     <div id="album-image"></div>
     <div id="artist-image"></div>
   </div>
@@ -92,7 +96,15 @@
   <span class="link">Click for info ....</span>
   
   <div id="content">
-      
+    <h3>Recently played</h3>
+<div id="playlist" class="block">
+</div>
+<div id="fromlastfm" class="hidden">
+  <iframe src="http://www.plusfm.net/arigatoplaylist.php" width="520" height="160" border="0">						
+  </iframe>
+</div>
+
+  
   </div>
   
 </article>
