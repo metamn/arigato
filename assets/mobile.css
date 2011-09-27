@@ -3,10 +3,7 @@
   margin: 0 auto;
 }
 
-#images, #info, #content {
-  position: relative;
-  top: -3.5em;
-}
+
 
 #hide-flashplayer {
   width: 240px;

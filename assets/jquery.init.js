@@ -56,6 +56,6 @@ jQuery(document).ready(function(){
   
   var changeInfo = setInterval(function(){
     setInfo();
-  }, 5000);
+  }, 500);
   
 });
