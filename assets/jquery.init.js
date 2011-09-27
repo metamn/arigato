@@ -38,24 +38,24 @@ jQuery(document).ready(function(){
   // Displaying song info  
   function setInfo() {
     var ampTrack = jQuery('#player #amptracker_NowPlaying .display span').first().html();
-    var ampArtist = jQuery('#player #amptracker_NowPlaying .display span:nth-child(3)').html();
-    var ampAlbum = jQuery('#player #amptracker_NowPlaying .display span:nth-child(5)').html();
+    var track = jQuery('#info #track').html();
     
-    jQuery('#info #track').html(ampTrack);
-    jQuery('#info #artist').html("<em>by</em> " + ampArtist);
-    jQuery('#info #album').html("<em>from</em> " + ampAlbum);   
-    
-    setAlbumImage(ampTrack, ampArtist);     
-    setArtistImage(ampTrack, ampArtist);
+    if (!(ampTrack == track)) {
+      var ampArtist = jQuery('#player #amptracker_NowPlaying .display span:nth-child(3)').html();
+      var ampAlbum = jQuery('#player #amptracker_NowPlaying .display span:nth-child(5)').html();
+      
+      
+      jQuery('#info #track').html(ampTrack);
+      jQuery('#info #artist').html("<em>by</em> " + ampArtist);
+      jQuery('#info #album').html("<em>from</em> " + ampAlbum);   
+      
+      setAlbumImage(ampTrack, ampArtist);     
+      setArtistImage(ampTrack, ampArtist);
+    }
   }
   
   var changeInfo = setInterval(function(){
     setInfo();
   }, 5000);
-  
-  jQuery(".link").click(function() {
-    setInfo();
-  });
-  
   
 });
