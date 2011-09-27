@@ -1,5 +1,6 @@
 jQuery.noConflict();
-     
+
+
 // Use jQuery via jQuery(...)
 jQuery(document).ready(function(){
   
@@ -48,17 +49,12 @@ jQuery(document).ready(function(){
     setArtistImage(ampTrack, ampArtist);
   }
   
-  
-  // Displaying recently played
-  function setPlayed() {
-    jQuery('#lastfmframe').load(function(){
-      jQuery('#lastfmframe').contents().find('body').html('Hey, i`ve changed content of <body>! Yay!!!');
-    });
-  }
+  var changeInfo = setInterval(function(){
+    setInfo();
+  }, 5000);
   
   jQuery(".link").click(function() {
     setInfo();
-    setPlayed();
   });
   
   
