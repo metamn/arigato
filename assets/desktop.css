@@ -1,3 +1,10 @@
+#header img {
+  opacity: .3;
+  width: 10em;
+  margin-left: 22%;
+}
+
+
 /* The grid
 */
 
@@ -5,12 +12,11 @@
 #images {
   width: 20%;
   margin-right: 5%;
+  margin-top: 5em;
 }
 #info {
   width: 70%;
   margin-right: 5%;
-  position: relative;
-  top: -15em;
 }
 #info #album-image {
   margin-top: 5%;
@@ -27,7 +33,5 @@
 #playlist {
   width: 40%;
   margin-left: 25%;
-  position: relative;
-  top: -10em;
 }
 
