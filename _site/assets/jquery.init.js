@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
         });
       }
       
-      jQuery('#info #album-image').html("<img src='" + result + "' />");     
+      jQuery('#album-info #album-image').html("<img src='" + result + "' />");     
     });
   }
   
@@ -31,27 +31,27 @@ jQuery(document).ready(function(){
         });        
       }
       
-      jQuery('#info #artist-image').html("<img src='" + result + "' />");      
+      jQuery('#artist-info #artist-image').html("<img src='" + result + "' />");      
     });
   }
   
   // Displaying song info  
   function setInfo() {
     var ampTrack = jQuery('#player #amptracker_NowPlaying .display span').first().html();
-    var track = jQuery('#info #track').html();
+    var track = jQuery('#album-info #track').html();
     
     if (!(ampTrack == track)) {
       var ampArtist = jQuery('#player #amptracker_NowPlaying .display span:nth-child(3)').html();
       var ampAlbum = jQuery('#player #amptracker_NowPlaying .display span:nth-child(5)').html();
       
       
-      jQuery('#info #track').html(ampTrack);
-      jQuery('#info #artist').html(ampArtist);
+      jQuery('#album-info #track').html(ampTrack);
+      jQuery('#artist-info #artist').html(ampArtist);
       if (ampAlbum) {
-        jQuery('#info #album').html("<em>from</em> " + ampAlbum);   
+        jQuery('#album-info #album').html("<em>from</em> " + ampAlbum);   
         setAlbumImage(ampTrack, ampArtist); 
       } else {
-        jQuery('#info #album').html('');   
+        jQuery('#album-info #album').html('');   
       }  
       setArtistImage(ampTrack, ampArtist);
     }

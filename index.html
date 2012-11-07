@@ -2,6 +2,16 @@
 layout: default
 ---
 
-{% for post in site.posts limit:1 %}
-  {% include article.html %}
+<aside>
+	<ul>
+		{% for post in site.posts %}
+			<li><img title="{{ post.image[0].title }}" src="{{ post.image[0].src }}"></li>
+		{% endfor %}
+	</ul>
+</aside>
+
+{% for post in site.posts %}
+	<article id="{{ post.title }}">
+		{{ post.content }}
+	</article>
 {% endfor %}
