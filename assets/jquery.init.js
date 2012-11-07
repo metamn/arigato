@@ -3,6 +3,20 @@ jQuery.noConflict();
 
 // Use jQuery via jQuery(...)
 jQuery(document).ready(function(){
+
+
+
+	// Select station
+	jQuery('aside li').first().addClass('active');
+	jQuery('article').first().addClass('active'); 
+	
+	jQuery('aside li').click(function() {
+		jQuery('aside li').removeClass('active');
+		jQuery(this).addClass('active');
+		
+		jQuery('article').removeClass('active');
+		jQuery('article#' + jQuery(this).attr('id')).addClass('active');
+	});
   
   
   // Getting album art via JSON from last.fm
@@ -63,10 +77,5 @@ jQuery(document).ready(function(){
     setInfo();
   }, 500);
   
-  
-  // Show / hide playlist
-  jQuery("#playlist h3").click(function() {
-    jQuery('#lastfmframe').show('slow');
-  });
   
 });

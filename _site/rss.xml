@@ -8,9 +8,18 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Wed, 07 Nov 2012 20:11:34 EET</pubDate>
-    <lastBuildDate>Wed, 07 Nov 2012 20:11:34 EET</lastBuildDate>
+    <pubDate>Wed, 07 Nov 2012 20:58:07 EET</pubDate>
+    <lastBuildDate>Wed, 07 Nov 2012 20:58:07 EET</lastBuildDate>
 
+    
+    <item>
+      <title>Csfm</title>
+      <link>http://arigato.ro/csfm</link>
+      <pubDate>Sun, 07 Oct 2012 00:00:00 EEST</pubDate>
+      <author></author>
+      <guid>http://arigato.ro/csfm</guid>
+      <description>Liquid error: private method `gsub' called for nil:NilClass</description>
+    </item>
     
     <item>
       <title>Plusfm</title>

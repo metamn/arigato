@@ -4,14 +4,14 @@ layout: default
 
 <aside>
 	<ul>
-		{% for post in site.posts %}
-			<li><img title="{{ post.image[0].title }}" src="{{ post.image[0].src }}"></li>
+		{% for post in site.posts reversed %}
+			<li id="{{ post.title | downcase }}"><img title="{{ post.image[0].title }}" src="{{ post.image[0].src }}"></li>
 		{% endfor %}
 	</ul>
 </aside>
 
-{% for post in site.posts %}
-	<article id="{{ post.title }}">
+{% for post in site.posts reversed %}
+	<article id="{{ post.title | downcase }}">
 		{{ post.content }}
 	</article>
 {% endfor %}
