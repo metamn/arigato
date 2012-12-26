@@ -8,8 +8,8 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Wed, 07 Nov 2012 22:24:50 EET</pubDate>
-    <lastBuildDate>Wed, 07 Nov 2012 22:24:50 EET</lastBuildDate>
+    <pubDate>Wed, 26 Dec 2012 20:47:34 EET</pubDate>
+    <lastBuildDate>Wed, 26 Dec 2012 20:47:34 EET</lastBuildDate>
 
     
     <item>
@@ -18,7 +18,7 @@
       <pubDate>Sun, 07 Oct 2012 00:00:00 EEST</pubDate>
       <author></author>
       <guid>http://arigato.ro/csfm</guid>
-      <description>Liquid error: private method `gsub' called for nil:NilClass</description>
+      <description>Liquid error: undefined method `gsub' for nil:NilClass</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Tue, 27 Sep 2011 00:00:00 EEST</pubDate>
       <author></author>
       <guid>http://arigato.ro/plusfm</guid>
-      <description>Liquid error: private method `gsub' called for nil:NilClass</description>
+      <description>Liquid error: undefined method `gsub' for nil:NilClass</description>
     </item>
     
   </channel> 

@@ -42,6 +42,9 @@ article {
 
 
 
+
+
+
 /* Aside
 */
 
@@ -50,7 +53,7 @@ aside ul {
 	margin: 0;
 }
 aside ul li {
-	margin-bottom: 2.5em;
+	margin: 1.5em 1em;
 	opacity: .1;
 	cursor: pointer;
 }
@@ -60,32 +63,9 @@ aside ul li:hover, aside ul li.active {
 
 
 
-
-/* Article
+/* Content
 */
 
-
-article {
-	display: none;
-}
-article.active {
-	display: block;
-}
-
-
-
-
-
-
-/* csfm
-*/
-
-
-
-
-
-/* Plusfm
-*/
 
 #artist-info, #album-info {
 	width: 45%;

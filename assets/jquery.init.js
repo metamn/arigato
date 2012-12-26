@@ -5,19 +5,11 @@ jQuery.noConflict();
 jQuery(document).ready(function(){
 
 
-
-	// Select station
-	jQuery('aside li').first().addClass('active');
-	jQuery('article').first().addClass('active'); 
+	// Highlight station
+	jQuery('aside li').removeClass('active');
+	var id = jQuery('article').attr('id');
+	jQuery('aside li#' + id).addClass('active'); 
 	
-	jQuery('aside li').click(function() {
-		jQuery('aside li').removeClass('active');
-		jQuery(this).addClass('active');
-		
-		jQuery('article').removeClass('active');
-		jQuery('article#' + jQuery(this).attr('id')).addClass('active');
-	});
-  
   
   // Getting album art via JSON from last.fm
   function setAlbumImage(track, artist) {
@@ -49,8 +41,11 @@ jQuery(document).ready(function(){
     });
   }
   
-  // Displaying song info  
+  // Displaying song info
+  // - this technique works only with Plusfm
+  // - Deezer embeds the player into an iframe so track info cannot be accessed
   function setInfo() {
+   
     var ampTrack = jQuery('#player #amptracker_NowPlaying .display span').first().html();
     var track = jQuery('#album-info #track').html();
     
@@ -69,13 +64,15 @@ jQuery(document).ready(function(){
       }  
       setArtistImage(ampTrack, ampArtist);
     }
+   
   }
+  
   
   
   // Polling for song change
   var changeInfo = setInterval(function(){
     setInfo();
-  }, 500);
+  }, 1000);
   
   
 });

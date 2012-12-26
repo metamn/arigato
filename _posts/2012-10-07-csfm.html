@@ -1,39 +1,33 @@
 ---
-layout: post
+layout: default
 image:
-  - title: cs fm
+  - title: csé fm -- Under Construction!
     url: http://arigato.ro
-    src: /assets/csfm.jpg
+    src: /assets/logo.png
 ---
 
-<div id="artist-info">
-		<h1 id="artist"></h1>
-		<div id="artist-image"></div>
-		
-		<div id="player">    
-			<audio controls="controls">
-				<source src="http://dl.dropbox.com/u/3644199/music/01-Booka%20Shade-Vertigo.mp3">
-				<p>Your browser does not support playing music. Please upgrade.</p>
-				
-				<!--
-					
-				- loads local files with ruby
-				- inserts here the playlist, jQuery will shuffle
-				- creates an yml database instead of id3 tags
-				- to like / add meta info for an mp3 the yml needs to be modified which needs Sinatra .... or a backend as a service
-				- http://readwrite.com/2012/04/17/mobile-backend-as-a-service-ec
-				
-				
-				-->
-			</audio>
-		</div>
-</div>
 
-<div id="album-info">
-	<h2 id="track"></h2>
-	<h3 id="album"></h3>
-	<div id="album-image"></div> 
-</div>
+<article id="{{ page.title | downcase }}">
+  <div id="artist-info">
+		  <h1 id="artist"></h1>
+		  <div id="artist-image"></div>
+		
+		  <div id="player"> 
+		    <iframe id="deezer" width="1" scrolling="no" height="1" frameborder="0" src="http://www.deezer.com/en/plugins/player?autoplay=true&amp;playlist=false&amp;width=700&amp;height=80&amp;cover=true&amp;type=playlist&amp;id=155998261&amp;title=&amp;app_id=108571" allowtransparency="true"></iframe>
+		  </div>
+  </div>
+
+  <div id="album-info">
+	  <h2 id="track"></h2>
+	  <h3 id="album"></h3>
+	  <div id="album-image"></div> 
+  </div>
+</article>
+
+
+
+
+
 
 	
 

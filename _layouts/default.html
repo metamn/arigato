@@ -3,9 +3,20 @@
 <body>
   <div id="container">    
     <section id="content">
+      <aside>
+	      <ul>
+		      {% for post in site.posts %}
+			      <li id="{{ post.title | downcase }}">
+			        <a href="{{ post.url }}" title="{{ post.image[0].title }}">
+			          <img title="{{ post.image[0].title }}" src="{{ post.image[0].src }}">
+			        </a>
+			      </li>
+		      {% endfor %}
+	      </ul>
+      </aside>
+      
       {{ content }}
     </section>
-    
   </div>
   
   {% include ga.html %}

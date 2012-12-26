@@ -2,16 +2,8 @@
 layout: default
 ---
 
-<aside>
-	<ul>
-		{% for post in site.posts reversed %}
-			<li id="{{ post.title | downcase }}"><img title="{{ post.image[0].title }}" src="{{ post.image[0].src }}"></li>
-		{% endfor %}
-	</ul>
-</aside>
 
-{% for post in site.posts reversed %}
-	<article id="{{ post.title | downcase }}">
-		{{ post.content }}
-	</article>
+
+{% for post in site.posts limit:1 %}
+  {{ post.content }}
 {% endfor %}
